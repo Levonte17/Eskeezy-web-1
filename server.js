@@ -23,13 +23,16 @@ db.on('connected', () => console.log('connected to mongoDB'));
 app.use(express.urlencoded({extended:false}));
 //app.use(methodOverride('_method'));
 
+//NEW
+app.get('/product/new', (req, res) => {
+res.render('new.ejs');
+});
 //POST ROUTE
 app.post('/product', (req, res) => {
-    promise = Product.create(req.body);
-promise.then((createdProduct) => {
-
-res.send(createdProduct);
+    Product.create(req.body, (err, createdProduct) => {
+        res.send(createdProduct);
     });
+
 });
 //LISTEN 
 app.listen(PORT, () => {
