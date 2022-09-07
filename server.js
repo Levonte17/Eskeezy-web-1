@@ -1,30 +1,35 @@
 //DEPENDECIES
 const express = require('express');
 const mongoose = require('mongoose');
-const methodOverride = require('method-override');
-const shirtsRouter = require('./controllers/shirts');
-const pantsRouter = require('./controllers/pants');
-const jacketsRouter = require('./controllers/jackets');
-const shoesRouter = require('./controllers/shoes');
-const aboutsRouter = require('./controllers/abouts');
-const paymentsRouter = require('./controllers/payments');
+const Product = require('./models/product')
+//const methodOverride = require('method-override');
+//const productsRouter = require('./controllers/products');
 //INITIALIZE
 const app = express();
+
 //CONFIG
 require('dotenv').config();
 const PORT = process.env.PORT;
 const DATABASE_URI = process.env.DATABASE_URI;
 const db = mongoose.connection;
+
 //CONNECT MONGOdb
 mongoose.connect(DATABASE_URI);
+
 //MONGOOSE CONNECTION LISTENER
 db.on('connected', () => console.log('connected to mongoDB'));
+
 //MIDDLEWARE
 app.use(express.urlencoded({extended:false}));
-app.use(methodOverride('_method'));
-//HOME ROUTE
-app.get('/', (req, res) => {
-    res.redirect('Home_index.ejs');
+//app.use(methodOverride('_method'));
+
+//POST ROUTE
+app.post('/product', (req, res) => {
+    promise = Product.create(req.body);
+promise.then((createdProduct) => {
+
+res.send(createdProduct);
+    });
 });
 //LISTEN 
 app.listen(PORT, () => {
