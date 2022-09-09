@@ -1,0 +1,26 @@
+[
+   {
+    "img": "https://i.imgur.com/9O2fGFD.jpg",
+    "name": "DA BEAT",
+    "price":35,
+    "category": "Shirts"
+ },
+ {
+    "img": "https://i.imgur.com/v21MjKd.jpg",
+    "name": "STAR BOY",
+    "price":35,
+    "category": "Shirts"
+ },
+ {
+    "img": "https://i.imgur.com/yll2dZX.jpg",
+    "name": "INK BOY",
+    "price":35,
+    "category": "Shirts"
+ },
+ {
+    "img": "https://i.imgur.com/vgQg3jg.jpg",
+    "name": "SOUND QUAKE",
+    "price":35,
+    "category": "Shirts"
+ }
+]

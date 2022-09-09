@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Product</title>
 </head>
 <body>
-    
+            <h1>Upload New Items</h1>
+    <form action="/product" method="POST">
+        <label>
+            Name:
+            <input type="text" placeholder="Item Name" name="name">
+        </label>
+        <br>
+        <label>
+            Price: $
+            <input type="number" placeholder="Item Price" name="price">
+        </label>
+        <br>
+        <label>
+            Img:
+            <input type="text" placeholder="Item.png" name="img">
+        </label>
+        <br>
+        <label>
+            Category: 
+            <input type="text" placeholder="category" name="category">
+        </label>
+        <br>
+            <input type="submit" value="Add Product">
+    </form>
+    <a href="/product"><button> Shop Eskeezy </button></a>
+
 </body>
 </html>
