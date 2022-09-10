@@ -22,6 +22,7 @@ db.on('connected', () => console.log('connected to mongoDB'));
 //MIDDLEWARE
 app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
+app.use(express.static('/public/css'));
 
 //HOME REDIRECT
 app.get('/', (req, res) => res.redirect('/product'));
@@ -46,13 +47,17 @@ Product.find({}, (err, product) => {
         });
     });
 });
+//PANTS INDEX
+app.get('/pants', (req, res) => {
+   res.render('pants_index.ejs'); 
+});
 /*
 app.get('/product', (req, res) => {
     Product.find({category: "shirt"}, (err, product) => {
 res.render('index.ejs');
          });
     });
-    */
+*/
 
     //NEW
 app.get('/product/new', (req, res) => {
