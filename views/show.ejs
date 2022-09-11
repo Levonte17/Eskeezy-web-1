@@ -20,8 +20,11 @@
             <class="list-product">
             
                 <a href="/product" class="link">Graphic Shirts</a>
+                &nbsp;&nbsp;&nbsp;
                 <a href="/pants" class="link">Kustoms</a>
+                &nbsp;&nbsp;&nbsp;
                 <a href="/product" class="link">About Me</a>
+                &nbsp;&nbsp;&nbsp;
                 <a href="/product" class="link">Frequent Q&A's</a>
                 
             </div>
@@ -35,10 +38,46 @@
     <img src=" <%= Product.img %> " alt="" width="50%" height="50%"> 
     <p> $<%= Product.price %></p>
     <p><%= Product.category %></p>
+
+
+<hr>
+<h3>Reviews - Average Rating</h3>
+<% let ratingAverage = 0 %> 
+<% Product.reviews.forEach(r => { %>
+<% ratingAverage += r.rating %> 
+    <div>
+        <p>
+            <strong><%= r.rating %></strong>
+            &nbsp;&nbsp;
+            <%= r.body %>
+        </p>
+    </div>
+<% }); %> 
+<h5>Average Rating <%= parseInt(ratingAverage / Product.reviews.length);  %> </h5>
+<h3>Leave Review On Item</h3>
+<form action="/product/<%= Product._id %>/reviews" method="POST">
+        <label>
+    <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+    </select>
+        </label>
+        <br>
+<label> Review:
+<textarea name="body" cols="50" rows="5"></textarea>
+</label>
+<br><br>
+<input type="submit"  value="Add Review">
+</form>
+<br>
+<br>
+
 <form action="/product/<%= Product._id %>?_method=DELETE" method="POST">
     <input type="submit" value="Delete Item">
 </form>
-
     <a href="/product/<%=Product._id%>/edit"> <button> Edit Item</button></a>
 
 </body>
