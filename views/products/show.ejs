@@ -25,6 +25,8 @@
                 &nbsp;&nbsp;&nbsp;
                 <a href="/about" class="link">About Me</a>
                 &nbsp;&nbsp;&nbsp;
+                <a href="/portraits" class="link">Portraits</a>
+                &nbsp;&nbsp;&nbsp;
                 <a href="/questions" class="link">Frequent Q&A's</a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="/login" class="link">Login</a>
@@ -64,11 +66,11 @@
 <form action="/product/<%= Product._id %>/reviews" method="POST">
         <label>
     <select name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5" selected>5</option>
+        <option value="1">⭐️</option>
+        <option value="2">⭐️⭐️</option>
+        <option value="3">⭐️⭐️⭐️</option>
+        <option value="4">⭐️⭐️⭐️⭐️</option>
+        <option value="5" selected>⭐️⭐️⭐️⭐️⭐️</option>
     </select>
         </label>
         <br>
@@ -87,6 +89,7 @@
     <a href="/product/<%=Product._id%>/edit"> <button> Edit Item</button></a>
 
 </body>
+<br><br><br><br>
 <hr>
 <footer>
     <p>Copyright &copy; All Rights Reserved Ekustoms <%= new Date().getFullYear() %> </p>

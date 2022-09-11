@@ -47,6 +47,16 @@ app.get('/questions', (req, res) => {
 res.render('qa_index.ejs')
 });
 
+//PORTRAIT
+app.get('/portraits', (req, res) => {
+res.render('portriate.ejs')
+});
+
+//ABOUT
+app.get('/about', (req, res) => {
+res.render('about_index.ejs')
+});
+
 //LISTEN 
 app.listen(PORT, () => {
     console.log(`APP IS LISTENING ON PORT${PORT}`);
