@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 const methodOverride = require('method-override');
 const productsRouter = require('./controllers/products');
+const usersRouter = require('./controllers/users');
 //INITIALIZE
 const app = express();
 
@@ -24,9 +25,10 @@ app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 app.use(express.static('/public/css'));
 
+
 // TO DO
 app.use(productsRouter);
-
+app.use(usersRouter);
 //MAIN INDEX HOME
 app.get('/', (req, res) => {
 res.render('index.ejs')
@@ -57,6 +59,10 @@ app.get('/about', (req, res) => {
 res.render('about_index.ejs')
 });
 
+//SIGNUP
+app.get('/signup', (req, res) => {
+res.render('signup.ejs')
+});
 //LISTEN 
 app.listen(PORT, () => {
     console.log(`APP IS LISTENING ON PORT${PORT}`);
