@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"  href="style.css"/>
+    
 </head>
 <body>
     <header>
@@ -40,13 +42,25 @@
     <hr>
     <br>
     <a href="/"><button> Home </button></a>
+            <h1>Shop Graphic Shirts</h1>
 
-
-
-
+    <% product.forEach(p => { %>
+        <a href="/product/<%= p._id%>">
+            <img src="<%= p.img %>" alt="" width="25%" height="25%">
+        </a>
+            <br>
+            <a>
+                <%= p.name %>
+            </a><br>
+        
+   <% }); %>  
+   <br>
+   <br>
+<a href="/product/new"><button>Add Items</button></a>
+</form>
 <hr>
-    <footer>
-        <p>Copyright &copy; All Rights Reserved Ekustoms <%= new Date().getFullYear() %> </p>
-    </footer>
+<footer>
+    <p>Copyright &copy; All Rights Reserved Ekustoms <%= new Date().getFullYear() %> </p>
+</footer>
 </body>
 </html>

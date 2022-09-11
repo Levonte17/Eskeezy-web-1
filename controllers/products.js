@@ -4,7 +4,7 @@ const router = express.Router();
 const Product = require('../models/product')
 
 //HOME REDIRECT
-router.get('/', (req, res) => res.redirect('/product'));
+//router.get('/', (req, res) => res.redirect('/product'));
 
 //SEED
 router.get('/product.seed', (req, res) => {
@@ -21,7 +21,7 @@ router.get('/product.seed', (req, res) => {
 //INDEX
 router.get('/product', (req, res) => {
 Product.find({}, (err, product) => {
-    res.render('index.ejs', {
+    res.render('products/index.ejs', { //change res.render 
         product: product
         });
     });
@@ -37,7 +37,7 @@ res.render('index.ejs');
 
     //NEW
 router.get('/product/new', (req, res) => {
-    res.render('new.ejs');
+    res.render('products/new.ejs');  //change res.render 
     });
 
     //DELETE
@@ -70,7 +70,7 @@ router.post('/product', (req, res) => {
 //EDIT
 router.get('/product/:id/edit', (req, res) => {
 Product.findById(req.params.id, (err, Product) => {
-res.render('edit.ejs', { Product });
+res.render('products/edit.ejs', { Product });   //change res.render 
     });
 });
 
@@ -78,7 +78,7 @@ res.render('edit.ejs', { Product });
 //SHOW
 router.get('/product/:id', (req, res) => {
 Product.findById(req.params.id, (err, Product) => {
-res.render('show.ejs', { Product });
+res.render('products/show.ejs', { Product });   //change res.render 
     });
 });
 

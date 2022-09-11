@@ -26,6 +26,27 @@ app.use(express.static('/public/css'));
 
 // TO DO
 app.use(productsRouter);
+
+//MAIN INDEX HOME
+app.get('/', (req, res) => {
+res.render('index.ejs')
+});
+
+//KUSTOMS INDEX
+app.get('/kustoms', (req, res) => {
+res.render('kustoms_index.ejs');
+});
+//SIGNUP INDEX
+app.get('/login', (req, res) => {
+res.render('login_index.ejs')
+});
+
+
+//Q&A INDEX
+app.get('/questions', (req, res) => {
+res.render('qa_index.ejs')
+});
+
 //LISTEN 
 app.listen(PORT, () => {
     console.log(`APP IS LISTENING ON PORT${PORT}`);

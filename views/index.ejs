@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet"  href="style.css"/>
-    
 </head>
 <body>
     <header>
@@ -23,31 +21,31 @@
 
                 <a href="/product" class="link">Graphic Shirts</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/pants" class="link">Kustoms</a>
+                <a href="/kustoms" class="link">Kustoms</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/product" class="link">About Me</a>
+                <a href="/about" class="link">About Me</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/product" class="link">Frequent Q&A's</a>
+                <a href="/questions" class="link">Frequent Q&A's</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/login" class="link">Login</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/logout" class="link">Logout</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/signup" class="link">SignUp</a>
                 
             </div>
         </nav>
         <br>
     </header>
-            <h1>Shop Graphic Shirts</h1>
-
-    <% product.forEach(p => { %>
-        <a href="/product/<%= p._id%>">
-            <img src="<%= p.img %>" alt="" width="25%" height="25%">
-        </a>
-            <br>
-            <a>
-                <%= p.name %>
-            </a><br>
-        
-   <% }); %>  
-   <br>
-   <br>
-<a href="/product/new"><button>Add Items</button></a>
-</form>
+    <hr>
+    <br>
+    <a href="/"><button> Home </button></a>
+    <main>
+    <h2> Welcome to E-Kustoms </h2>
+    </main>
+    <hr>
+<footer>
+    <p>Copyright &copy; All Rights Reserved Ekustoms <%= new Date().getFullYear() %> </p>
+</footer>
 </body>
 </html>
