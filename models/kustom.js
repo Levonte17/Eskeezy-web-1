@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //CONSTRUCTOR
-const pantsSchema = new Schema({
+const kustomSchema = new Schema({
     img: {type: String},
 }, {timestamps: true}); //approximately...
 
-module.exports = mongoose.model('pants', productSchema);
+module.exports = mongoose.model('kustoms', productSchema);

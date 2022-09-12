@@ -1,7 +1,8 @@
 //CONTROLLER DEPENDENCIES
 const express = require('express');
 const router = express.Router();
-const Product = require('../models/product')
+const Product = require('../models/product');
+
 
 //HOME REDIRECT
 //router.get('/', (req, res) => res.redirect('/product'));
@@ -50,7 +51,7 @@ res.redirect('/product');
 //UPDATE
 router.put('/product/:id', (req, res) => {
 Product.findByIdAndUpdate(req.params.id, req.body,
-    {new: true}, (err, previousProductObject) => {
+    {new: true}, (err, previousProductObject) => {  //only update one
 
 res.redirect('/product/' + req.params.id);
     });
@@ -81,7 +82,12 @@ Product.findById(req.params.id, (err, Product) => {
 res.render('products/show.ejs', { Product });   //change res.render 
     });
 });
-
+/*
+//KUSTOMS INDEX
+router.get('/kustoms', (req, res) => {
+    res.render('/links/kustoms.ejs');
+    });
+*/
 //NESTED REVIEWS
 router.post('/product/:id/reviews', (req, res) => {
     //find the item
