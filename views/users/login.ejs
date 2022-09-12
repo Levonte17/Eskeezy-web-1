@@ -38,13 +38,14 @@
                 &nbsp;&nbsp;&nbsp;
                 <a href="/questions" class="link" style="color: greenyellow; border-style: solid;">Frequent Q&A's</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 
+            <a href="/logout" class="link" style="color: red;"> Logout</a>
+            &nbsp;
             <a href="/login" class="link" style="color: red;"> Login </a>
-            &nbsp;&nbsp;&nbsp;
+            &nbsp;
             <a href="/signup" class="link" style="color: red;"> SignUp</a>
-                
-                
+            
             </div>
         </nav>
         <br>
@@ -59,22 +60,22 @@
 
 
     
-    <h1> Welcome Back, Please Login </h1>
+    <h1 style=" color: greenyellow; "> Welcome Back, Please Login </h1>
         <% if(error) { %> 
             <p style="color: red;"><%= error %></p>
         <% } %> 
 
     <form action="/login" method="POST">
-        <label> Username:
+        <label style=" color: red;"> Username:
         <input type="text" name="username">
         </label>
         <br>
-        <label>
+        <label style=" color: red;">
             Password:
             <input type="password" name="password">
         </label>
         <br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" style=" color: red;">
     </form>
         <br><br><br>
         <hr>
