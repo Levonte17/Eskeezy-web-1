@@ -8,15 +8,6 @@ const linksRouter = require('./controllers/links');
 const expressSession = require('express-session');
 
 
-
-
-
-//const path = require('path');
-
-
-
-
-
 //INITIALIZE
 const app = express();
 
@@ -54,7 +45,7 @@ const User = require('./models/user');
 app.use((req, res, next) => {
         //user in session?
     if(req.session.userId) {
-        user.findById(req.session.userId, (err, user) => {
+        User.findById(req.session.userId, (err, user) => {
             req.user = user;
         res.locals.user = {
             username: user.username,
