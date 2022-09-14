@@ -17,20 +17,20 @@
             <div class="logo">
     
                 <h1 style="text-align: center;">
-                    <a href="/"><img src="https://i.imgur.com/2Bf8jiF.jpg" alt="" height="25%" width="25%" class="center"></h1>
+                    <a href="/"><img src="https://i.imgur.com/2Bf8jiF.jpg" alt="" height="35%" width="35%" class="center"></h1>
                     </a>
                     <main>
             <class="list-product">
                 <h4>
-                <a href="/product" class="link" style="color: greenyellow; border-style: solid; align-content: center;" >Graphic Shirts</a>
+                <a href="/product" class="link" style="color: greenyellow; align-content: center;" >Graphic Shirts</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/kustoms" class="link" style="color: greenyellow; border-style: solid;">Kustoms</a>
+                <a href="/kustoms" class="link" style="color: greenyellow;">Kustoms</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/about" class="link" style="color: greenyellow; border-style: solid;">About Me</a>
+                <a href="/about" class="link" style="color: greenyellow;">About Me</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/portraits" class="link" style="color: greenyellow; border-style: solid;">Portraits</a>
+                <a href="/portraits" class="link" style="color: greenyellow;">Portraits</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/questions" class="link" style="color: greenyellow; border-style: solid;">Frequent Q&A's</a>
+                <a href="/questions" class="link" style="color: greenyellow;">Frequent Q&A's</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -43,25 +43,29 @@
             </h4>
         </div>
     </nav>
-    
+    <style>
+        h4{
+            font-size: large;
+        }
+    </style>
 </header>
-<a href="/"><button style="background-color: black; color: red;"> Home </button></a>
+<a href="/"><button style="background-color: black; color: red; font-size: large;"> Home </button></a>
 
 
 
 
     
-    <h1 style= " background-color: black; color: greenyellow; "> Welcome Back, Please Login </h1>
+    <h1 style= " background-color: black; color: greenyellow; font-size: xxx-large; "> Welcome Back, Please Login </h1>
         <% if(error) { %> 
             <p style=";"><%= error %></p>
         <% } %> 
 <br>
     <form action="/login" method="POST">
-        <label style=" color:;"> Username:
-        <input type="text" name="username" style="border: ;">
+        <label style=" color:; font-size: larger"> Username:
+        <input type="text" name="username" style="border:; ">
         </label>
         <br>
-        <label style=" color:;">
+        <label style=" color:; font-size: large;">
             Password:
             <input type="password" name="password">
         </label>
