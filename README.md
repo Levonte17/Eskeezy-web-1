@@ -4,11 +4,9 @@
 
 ## Technologies Used: To create this project I used node js, mongoDB, html and heroku. 
 
-## Screenshot
-![Alt text](/img/https://i.imgur.com/GOD6llg.png)
+## Screenshot ![Alt text](/img/https://i.imgur.com/GOD6llg.png)
 
-##Link
-[Ekustoms](https://eskeezy-1.herokuapp.com/)
+##Link [Ekustoms](https://eskeezy-1.herokuapp.com/)
 
 ## Future Enhancements: 
 Buy option
