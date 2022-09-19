@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
     <link rel="stylesheet"  href="/style.css"/>
     
@@ -44,65 +45,118 @@
             </h4>
         </div>
     </nav>
-    
-<style>
-    h4{
-        font-size: large;
 
-    }
-</style>
 
 </header>
 <a href="/"><button style="background-color:black; color: red; font-size: larger;"> Home </button></a>
 
 
 <h2 style="text-align:center; color: greenyellow; font-size: xxx-large;">Shop Graphic Shirts</h2>
-<section class="">
+<p style="color:; font-family: Arial, Helvetica, sans-serif; font-size: x-large;">
+    Kustom Graphic Shirts Are At <strong style="color: black; background-color: greenyellow;">$35</strong>
+                <br><br>
+
+
+                    Click
+        <a href="mailto:ekustoms8@gmail.com">
+            <button 
+            style="color: greenyellow; background-color:black; font-size: large; "> Kustoms 
+            </button>  
+        </a> For Inquiries
+    </p>
+<section>
+    
+    
    
     
 
     <% product.forEach(p => { %>
-        <a href="/product/<%= p._id%>" style="flex-direction: row;">
+        <a href="/product/<%= p._id%>">
 
-            <img src="<%= p.img %>" alt="" width="30%" height="30%" >
+            <img src="<%= p.img %>" alt="" width="35%" height="35%" >
            
         </a>
-
+        <br>
+        <a style="background-color: black; color: grey;"> <%= p.name %> </a>
     <br>
-            <a>
-                <%= p.name %>
-            </a>
+           
             <br>
    <% }); %>  
+
+
 </section>
 
 <style>
     
+    section
+        {
+        background-image:url("https://i.imgur.com/2Bf8jiF.jpg");
+        float: left;
+        background-position: center;
+        text-align: center;
+        }
 </style>
 
 <br>
    <br>
 
 
-<style> main{
+<style> 
+main{
 display: flex;
 flex-direction: ;
 }
-    
+h4{
+        text-align: center;
+        
+    }
+
 </style>
 
-<a href="/product/new"><button>Add Items</button></a>
+<br>
+
 </form>
+<br><br><br>
 <br><br><br><br>
-<hr>
+    
 <footer>
-    <p>Copyright &copy; All Rights Reserved Ekustoms <%= new Date().getFullYear() %> </p>
+    <a href="https://www.linkedin.com/in/fullstack-levonte-larry/" class="btn-nav-i">
+        <img src="https://i.imgur.com/dA5kwk8.png" 
+        height="13%" width="13%">
+    </a>
+    &nbsp;&nbsp;
+
+    <a href="https://www.instagram.com/the.digital.expert/" class="btn-nav-i">
+        <img src="https://i.imgur.com/JDowZkb.jpg" 
+        height="4%" width="4%">
+    </a>
+    &nbsp;&nbsp;
+
+    <a href="https://www.facebook.com/profile.php?id=100068595183069" class="btn-nav-i">
+        <img src="https://i.imgur.com/rB1CJLo.png" 
+        height="4%" width="4%">
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://www.youtube.com/channel/UCu0gSo_y1R6tbXWK94ktP8Q" class="btn-nav-i">
+        <img src="https://i.imgur.com/NJbgkwz.png" 
+        height="10%" width="10%">
+    </a>
+    <p style="color: black;">This Website Was Built By The Digital Expert Web & App Engineering Company
+    <br><br>Copyright &copy; All Rights Reserved Ekustoms <%= new Date().getFullYear() %> </p>
+    <br><br><br><br>
 </footer>
+
 </body>
 </html>
 
-
 <style>
+    footer{
+        text-align: center;
+        background-color: white;
+    }
+
+
+
     
     footer{
         text-align: center;

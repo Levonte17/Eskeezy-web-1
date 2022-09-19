@@ -10,7 +10,8 @@
     "method-override": "^3.0.0",
     "mongoose": "^6.5.4",
     "nodemon": "^2.0.19",
-    "pub": "^0.2.0"
+    "pub": "^0.2.0",
+    "stripe": "^10.10.0"
   },
   "scripts": {
     "start": "node server.js"

@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const productsRouter = require('./controllers/products');
 const usersRouter = require('./controllers/users');
 const linksRouter = require('./controllers/links');
+const stripesRouter = require('./controllers/stripes')
 const expressSession = require('express-session');
 
 
@@ -26,7 +27,7 @@ db.on('connected', () => console.log('connected to mongoDB'));
 //MIDDLEWARE
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-//app.use(express.static)
+app.use(express.static('public'))
 
 
 //SESSON MIDDLEWARE
@@ -41,6 +42,7 @@ app.use(expressSession({
     //Require User Model
 const User = require('./models/user');
 
+/*
     //Only Admin Can Upload/Edit products
 app.use((req, res, next) => {
         //user in session?
@@ -48,29 +50,34 @@ app.use((req, res, next) => {
         User.findById(req.session.userId, (err, user) => {
             req.user = user;
         res.locals.user = {
-            username: user.username,
-            _id: user._id
-    }; next();
+            username: user.username
+    }; 
 });
 } else {
                 //Access Username Only
-            res.locals.user = null;
             res.user = null;
+            res.locals.user = null;
             next();
-}
-       
+        }
 }); 
+
 
 //AUTHENTICATION PAGES
 function isAuthenticated(req, res, next) { //not in use
-if(!req.user) return res.redirect('/login')
+    next();
 }
+*/
 
+//HOME RE-ROUTE
+app.get('/', (req, res) => {
+    res.render('./links/index.ejs')
+    });
 
 // TO DO
 app.use(productsRouter);
 app.use(usersRouter);
 app.use(linksRouter);
+//app.use(stripes.Router);
 
 //LISTEN 
 app.listen(PORT, () => {
