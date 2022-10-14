@@ -9,8 +9,8 @@ const reviewSchema = new Schema({
     }, {timestamps: true}); //approximatly...
 //CONSTRUCTOR
 const productSchema = new Schema({
-    img: {type: String},
-    name: {type: String},
+    img: [{type: String}],
+    name: [{type: String}],
     price: {type: Number},
     reviews: [reviewSchema] //embeded
 }, {timestamps: true}); //approximately...
