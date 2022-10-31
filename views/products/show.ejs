@@ -6,49 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-image: url('https://i.imgur.com/BdCKBbu.jpg');">
     <header>
         <nav>
-                <class="nav-btns">
-                <h3 ><a href="https://www.facebook.com/profile.php?id=100023486103528" class="btn-nav-i"><img src="https://i.imgur.com/rB1CJLo.png" alt="" height="3%" width="3%"></a>
-                <a href="https://instagram.com/e_kustomsllc?igshid=YmMyMTA2M2Y=" class="btn-nav-i"><img src="https://i.imgur.com/JDowZkb.jpg" alt="" height="3%" width="3%"></a>
-                <a href="" class="btn-nav-i"><img src="https://i.imgur.com/P7BbMb7.png" alt="" height="4%" width="4%"></a>
-            </h3>
-            <div class="logo">
-    
-                <h1 style="text-align: center;">
-                    <a href="/"><img src="https://i.imgur.com/2Bf8jiF.jpg" alt="" height="35%" width="35%" class="center"></h1>
-                    </a>
-                    <main>
-            <class="list-product">
-                <h4><br>
-                <a href="/product" class="link" style="color: greenyellow;  align-content: center;" >Graphic Shirts</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/kustoms" class="link" style="color: greenyellow; ">Kustoms</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/about" class="link" style="color: greenyellow; ">About Me</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/portraits" class="link" style="color: greenyellow; ">Portraits</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/questions" class="link" style="color: greenyellow; ">Contact  E-Kustums</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 
-                <a href="/logout" class="link" style="color: red;"> Logout</a>
-                &nbsp; 
-                <a href="/login" class="link" style="color: red;"> Login </a>
-                &nbsp; 
-                <a href="/signup" class="link" style="color: red;"> SignUp</a>
-                <br><br>
+            <div class="logo">
+                <h1 style="text-align: center;">
+                    <a href="/"><img src="https://i.imgur.com/7zoIxQC.jpg" 
+                        alt="" height="35%" width="35%" 
+                        style="border-radius: 50%;"
+                        class="center">
+                </h1>
+                    </a>
+                   
+        <class="list-product">
+            <h4 style="text-align: center; background-color: yellowgreen;">
+                <a href="/product" class="link" 
+                    style="color: black; align-content: center;" >Graphic Shirts</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/kustoms" class="link" style="color: black;">Kustoms</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/about" class="link" style="color: black;">About Me</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/portraits" class="link" style="color: black;">Portraits</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/questions" class="link" style="color: black;">Contact  E-Kustums</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/kids" class="link" style="color: black;">Super Kids</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/murals" class="link" style="color: black;">Murals</a>
+              
             </h4>
         </div>
     </nav>
-    <style>
-        h4{
-            font-size: large;
-        }
-    </style>
+   <style>
+    h4{
+        font-size: large;
+
+    }
+</style>
 </header>
 <a href="/"><button style="background-color: red; font-size: large;"> Home </button></a>
 
@@ -57,9 +53,9 @@
 
 
 
-    <h1 style="background-color: orange; font-size: xxx-large; text-align: center;"><%= Product.name %></h1>
+    <h1 style=" font-size: xxx-large; text-align: center;"><%= Product.name %></h1>
     <img src=" <%= Product.img %> " alt="" width="50%" height="50%"> 
-    <p style="text-align: left; font-size: x-large; color: black;"> $<%= Product.price %></p>
+    <p style="text-align: left; font-size: x-large; color: greenyellow;"> $<%= Product.price %></p>
     <p><%= Product.category %></p>
 
     <a href="mailto:ekustoms8@gmail.com">
@@ -98,48 +94,13 @@
         </label>
         <br>
         <br>
-<label> Review:
+<label style="color: greenyellow;font-size: x-large;"> Review:
 <textarea name="body" cols="50" rows="3"></textarea>
 </label>
 <br><br><br>
 <input type="submit"  value="Add Review">
 </form>
-<br>
-<br>
 
-<form action="/product/<%= Product._id %>?_method=DELETE" method="POST">            
-            
-</form>
-</body>
-<br><br><br>
-<br><br><br><br>
-    <hr>
-<footer>
-    <a href="https://www.linkedin.com/in/fullstack-levonte-larry/" class="btn-nav-i">
-        <img src="https://i.imgur.com/dA5kwk8.png" 
-        height="13%" width="13%">
-    </a>
-    &nbsp;&nbsp;
-
-    <a href="https://www.instagram.com/the.digital.expert/" class="btn-nav-i">
-        <img src="https://i.imgur.com/JDowZkb.jpg" 
-        height="4%" width="4%">
-    </a>
-    &nbsp;&nbsp;
-
-    <a href="https://www.facebook.com/profile.php?id=100068595183069" class="btn-nav-i">
-        <img src="https://i.imgur.com/rB1CJLo.png" 
-        height="4%" width="4%">
-    </a>
-    &nbsp;&nbsp;
-    <a href="https://www.youtube.com/channel/UCu0gSo_y1R6tbXWK94ktP8Q" class="btn-nav-i">
-        <img src="https://i.imgur.com/NJbgkwz.png" 
-        height="10%" width="10%">
-    </a>
-    <p style="color: black;">This Website Was Built By The Digital Expert Web & App Engineering Company
-    <br><br>Copyright &copy; All Rights Reserved Ekustoms <%= new Date().getFullYear() %> </p>
-    <br><br><br><br>
-</footer>
 
 </body>
 </html>
@@ -157,16 +118,11 @@
         text-align: center;
         
     }
-    body{
-        background-color:white;
-    } 
+    
     footer{
-        background-color:;
         color: white;
     }
-    header{
-        background-color: white;
-    }
+    
     h2{
         background-color: black;
         text-align:center;

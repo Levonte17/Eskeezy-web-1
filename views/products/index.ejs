@@ -24,7 +24,7 @@
             <class="list-product">
                 <h4 style="text-align: center; background-color: yellowgreen;">
                 <a href="/product" class="link" 
-                    style="color: black; align-content: center;" >Graphic Shirts</a>
+                    style="color: grey; align-content: center;" >Graphic Shirts</a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="/kustoms" class="link" style="color: black;">Kustoms</a>
                 &nbsp;&nbsp;&nbsp;
@@ -34,7 +34,7 @@
                 &nbsp;&nbsp;&nbsp;
                 <a href="/questions" class="link" style="color: black;">Contact  E-Kustums</a> 
                 &nbsp;&nbsp;&nbsp;
-                <a href="/questions" class="link" style="color: black;">Super Kids</a>
+                <a href="/kids" class="link" style="color: black;">Super Kids</a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="/murals" class="link" style="color: black;">Murals</a>
             </h4>
@@ -49,24 +49,29 @@
 <div class="column">
 
         <ul class="container"
-            style="font-size:large; 
-                display: flex; width: 50%;
-                flex-wrap: wrap;"
+            style="
+                margin: auto;
+                font-size:large; 
+                display: flex; width: 90%;
+                flex-wrap: wrap;
+                justify-content: center;"
         >
-    <% product.forEach(p => { %>
-        <li>
-            <img src="<%= p.img %>" 
-                alt="" width="80%" height="80%" 
+        <% product.forEach(p => { %>
+            <li style="display: flex; 
+                        flex-direction: column; 
+                        justify-content: center; 
+                        align-items: center; margin: 15px"
             >
-            <a href="/product/<%= p._id%>"
-            >
-            <%= p.name %>
+            <a>
+                <img src="<%= p.img %>" alt="" width="350" height="350"
+                        style="border-radius: 25%;" >
             </a>
-    <br>
-        </li>
- 
-   <% }); %> 
-        </ul>
+                <a href="/product/<%= p._id%>">
+                    <%= p.name %>
+                </a>
+            </li>
+    <% }); %> 
+    </ul>
 
 </div>
 
@@ -76,12 +81,17 @@
 
 
 
-
-
-
-
-
 <style>
+    .shirts:hover
+    a:hover,
+    .logo:hover
+    a:hover,
+    .list-product:hover
+    a:hover{
+        background-color: orange;
+        padding: 5px 5px 5px;
+        border-radius: 25%;
+    }
     p{
             font-size: xxx-large;
         }

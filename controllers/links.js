@@ -7,6 +7,14 @@ const router = express.Router();
 router.get('/', (req, res) => {
 res.render('links/index.ejs')
 });
+//MURALS
+router.get('/murals', (req, res) => {
+res.render('links/murals.ejs')
+});
+//SUPER KIDS
+router.get('/kids', (req, res) => {
+res.render('links/kids.ejs')
+});
 
 //KUSTOMS 
 router.get('/kustoms', (req, res) => {
