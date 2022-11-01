@@ -11,6 +11,10 @@ res.render('links/index.ejs')
 router.get('/murals', (req, res) => {
 res.render('links/murals.ejs')
 });
+//CANVAS
+router.get('/canvas', (req, res) => {
+res.render('links/canvas.ejs')
+});
 //SUPER KIDS
 router.get('/kids', (req, res) => {
 res.render('links/kids.ejs')
