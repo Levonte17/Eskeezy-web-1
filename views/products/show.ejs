@@ -8,79 +8,109 @@
 </head>
 <body style="background-image: url('https://i.imgur.com/BdCKBbu.jpg');">
     <header>
-        <nav>
-                
+        <nav>  
             <div class="logo">
                 <h1 style="text-align: center;">
                     <a href="/"><img src="https://i.imgur.com/7zoIxQC.jpg" 
-                        alt="" height="35%" width="35%" 
-                        style="border-radius: 50%;"
+                        alt="" height="25%" width="25%" 
+                        style="border-radius: 50%;padding:3% 3% 3%; 
+                        border-radius: 25%; box-shadow:20px 20px 20px yellowgreen;"
                         class="center">
-                </h1>
                     </a>
+                </h1>
                    
         <class="list-product">
-            <h4 style="text-align: center; background-color: yellowgreen;">
+            
+            <h4 style="text-align: center; 
+                    background-color: yellowgreen;">
+
                 <a href="/product" class="link" 
-                    style="color: black; align-content: center;" >Graphic Shirts</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/kustoms" class="link" style="color: black;">Kustoms</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/about" class="link" style="color: black;">About Me</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/portraits" class="link" style="color: black;">Portraits</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/questions" class="link" style="color: black;">Contact  E-Kustums</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/kids" class="link" style="color: black;">Super Kids</a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="/murals" class="link" style="color: black;">Murals</a>
-              
+                    style="color: black; 
+                        align-content: center;">
+                    Graphic Shirts
+                </a>
+                        &nbsp;&nbsp;&nbsp;
+                <a href="/kustoms" class="link" style="color: black;">
+                    Kustoms
+                </a>
+                        &nbsp;&nbsp;&nbsp;
+                <a href="/about" class="link" style="color: black;">
+                    About Me
+                </a>
+                        &nbsp;&nbsp;&nbsp;
+                <a href="/portraits" class="link" style="color: black;">
+                    Portraits
+                </a>
+                        &nbsp;&nbsp;&nbsp;
+                <a href="/questions" class="link" style="color: black;">
+                    Contact  E-Kustums
+                </a>
+                        &nbsp;&nbsp;&nbsp;
+                <a href="/kids" class="link" style="color: black;">
+                    Super Kids
+                </a>
+                        &nbsp;&nbsp;&nbsp;
+                <a href="/murals" class="link" style="color: black;">
+                    Murals
+                </a>
+                        &nbsp;&nbsp;&nbsp;
+                <a href="/canvas" class="link" style="color: black;">
+                    Canvas
+                </a>
+
             </h4>
         </div>
     </nav>
-   <style>
-    h4{
-        font-size: large;
-
-    }
-</style>
+   
 </header>
-<a href="/"><button style="background-color: red; font-size: large;"> Home </button></a>
 
+    <h1 style=" font-size: 4rem; text-align: center;">
+        <%= Product.name %>
+    </h1>
 
-
-
-
-
-    <h1 style=" font-size: xxx-large; text-align: center;"><%= Product.name %></h1>
     <img src=" <%= Product.img %> " alt="" width="50%" height="50%"> 
-    <p style="text-align: left; font-size: x-large; color: greenyellow;"> $<%= Product.price %></p>
-    <p><%= Product.category %></p>
 
-    <a href="mailto:ekustoms8@gmail.com">
+    <p style="text-align: left; font-size: x-large; color: greenyellow;">
+         $<%= Product.price %>
+    </p>
+
+    <p>
+        <%= Product.category %>
+    </p>
+
+    <a href="mailto:ekustoms8@gmail.com" 
+        style="padding: 3% 3% 3%;">
+
         <button 
-        style="color: greenyellow; background-color:black; font-size: large; "> Inquire 
+            style="color: yellowgreen; background-color:black; 
+                    font-size: large; font-size: 2rem;
+                    padding:3% 10% 3%; border-radius: 25%; 
+                    box-shadow:20px 20px 20px yellowgreen;
+                    font-style: italic; font-family: sans-serif;"
+            > Inquiry 
         </button>  
     </a>
 
-    <h5> <br> <br>Customer Reviews:
-<% let ratingAverage = 0 %> 
-<% Product.reviews.forEach(r => { %>
-<% ratingAverage += r.rating %> 
-    <div>
-        <p>
-            <strong><%= r.rating %></strong>
-            &nbsp;&nbsp;
-            <%= r.body %>
+    <h5> 
+
+        Customer Reviews:
+            <% let ratingAverage = 0 %> 
+            <% Product.reviews.forEach(r => { %>
+            <% ratingAverage += r.rating %> 
+<div>
+        <p style="font-size: 3rem;">
+            <strong>
+                <%= r.rating %>
+            </strong>
+                    &nbsp;&nbsp;
+                <%= r.body %>
         </p>
-    </div>
-<% }); %> 
-
-
-    <br>
-    Average Rating <%= parseInt(ratingAverage / Product.reviews.length);  %> 
-<br><br></h5>
+</div>
+                <% }); %> 
+            <br>
+        Average Rating <%= parseInt(ratingAverage / Product.reviews.length);  %> 
+            <br>
+    </h5>
 
 <form action="/product/<%= Product._id %>/reviews" method="POST">
         <label>
@@ -94,14 +124,26 @@
         </label>
         <br>
         <br>
-<label style="color: greenyellow;font-size: x-large;"> Review:
-<textarea name="body" cols="50" rows="3"></textarea>
+<label 
+    style="color: black; 
+           font-size: 3rem;
+            ">
+                 Review:
+        <br>
+    <textarea name="body" cols="50%" rows="10%"
+        
+>
+    </textarea>
 </label>
-<br><br><br>
-<input type="submit"  value="Add Review">
+        <br><br><br>
+<input type="submit"  value="Add Review"
+style="color: yellowgreen; background-color:black; 
+font-size: large; font-size: 2rem;
+padding:3% 10% 3%; border-radius: 25%; 
+box-shadow:20px 20px 20px yellowgreen;
+font-style: italic; font-family: sans-serif;"
+>
 </form>
-
-
 </body>
 </html>
 
@@ -119,6 +161,10 @@
         
     }
     
+    h4{
+        font-size: x-large;
+
+    }
     footer{
         color: white;
     }
@@ -139,7 +185,7 @@
         text-align: center;
         background-color: black;
         color: yellowgreen;
-        font-size: medium;
+        font-size: 3rem;
     }
     p{
         color: yellowgreen;

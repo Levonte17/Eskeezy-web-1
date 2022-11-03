@@ -63,9 +63,11 @@
                         justify-content: center; 
                         align-items: center; margin: 15px"
             >
-            <a>
-                <img src="<%= p.img %>" alt="" width="350" height="350"
-                        style="border-radius: 25%;" >
+            <a href="/product/<%= p._id%>">
+                <img src="<%= p.img %>" 
+                     alt="" width="350" height="350"
+                        style="border-radius: 25%;
+                ">
             </a>
                 <a href="/product/<%= p._id%>">
                     <%= p.name %>
